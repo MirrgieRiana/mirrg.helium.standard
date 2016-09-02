@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 /**
  * とてもシンプルなイベントマネージャです。
  */
-class EventManager<T>
+public class EventManager<T>
 {
 
 	private ArrayList<Class<? extends T>> classes = new ArrayList<>();
