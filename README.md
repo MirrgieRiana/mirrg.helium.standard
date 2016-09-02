@@ -21,6 +21,24 @@
   - それぞれ4つまで
   - それ以上は入れ子状にして使う。
 
+## mirrg.helium.standard.hydrogen.util
+
+### 説明
+
+整数や文字列に関する簡素なヘルパ関数を提供する。
+
+### エントリーポイント
+
+- `mirrg.helium.standard.hydrogen.util.*`
+
+### 機能
+
+- ストリームAPI関連
+- ローカライズ関連
+- ロギング関連
+- 数学関連
+- 文字列関連
+
 ## mirrg.helium.standard.hydrogen.event
 
 ### 説明
