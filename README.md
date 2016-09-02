@@ -7,6 +7,10 @@
 
 ## mirrg.helium.standard.hydrogen.struct
 
+### 説明
+
+タプルと構造体を提供する。
+
 ### エントリーポイント
 
 - `mirrg.helium.standard.hydrogen.struct.*`
@@ -18,6 +22,10 @@
   - それ以上は入れ子状にして使う。
 
 ## mirrg.helium.standard.hydrogen.event
+
+### 説明
+
+型によってイベントが振り分けられるシンプルなイベントマネージャ。
 
 ### エントリーポイント
 
