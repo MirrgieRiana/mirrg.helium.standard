@@ -16,18 +16,6 @@ public class Button implements IButton
 	}
 
 	@Override
-	public boolean isPressed()
-	{
-		return state > 0;
-	}
-
-	@Override
-	public boolean isReleased()
-	{
-		return state < 0;
-	}
-
-	@Override
 	public int getState()
 	{
 		return state;
