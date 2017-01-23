@@ -104,7 +104,7 @@ public class InputStatus implements IInputStatus
 		for (Button button : buttons) {
 			button.update();
 		}
-		for (Button key : buttons) {
+		for (Button key : keys) {
 			key.update();
 		}
 	}
