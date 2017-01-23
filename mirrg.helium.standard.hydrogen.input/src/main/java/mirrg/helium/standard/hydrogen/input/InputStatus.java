@@ -26,6 +26,13 @@ public class InputStatus implements IInputStatus
 	{
 		buttons = new Button[buttonsCount];
 		keys = new Button[keysCount];
+
+		for (int i = 0; i < buttons.length; i++) {
+			buttons[i] = new Button();
+		}
+		for (int i = 0; i < keys.length; i++) {
+			keys[i] = new Button();
+		}
 	}
 
 	@Override
