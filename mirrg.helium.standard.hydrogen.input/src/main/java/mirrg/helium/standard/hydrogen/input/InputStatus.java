@@ -88,7 +88,7 @@ public class InputStatus implements IInputStatus
 		return keys.length;
 	}
 
-	public void update()
+	public synchronized void update()
 	{
 		px = x;
 		py = y;
@@ -107,14 +107,14 @@ public class InputStatus implements IInputStatus
 		mousePressed(event.getX(), event.getY(), event.getButton());
 	}
 
-	public void mousePressed(int x, int y, int button)
+	public synchronized void mousePressed(int x, int y, int button)
 	{
 		this.x = x;
 		this.y = y;
 		buttons[button].press();
 	}
 
-	public void mousePressed(int button)
+	public synchronized void mousePressed(int button)
 	{
 		buttons[button].press();
 	}
@@ -124,14 +124,14 @@ public class InputStatus implements IInputStatus
 		mouseReleased(event.getX(), event.getY(), event.getButton());
 	}
 
-	public void mouseReleased(int x, int y, int button)
+	public synchronized void mouseReleased(int x, int y, int button)
 	{
 		this.x = x;
 		this.y = y;
 		buttons[button].release();
 	}
 
-	public void mouseReleased(int button)
+	public synchronized void mouseReleased(int button)
 	{
 		buttons[button].release();
 	}
@@ -141,7 +141,7 @@ public class InputStatus implements IInputStatus
 		mouseDragged(event.getX(), event.getY());
 	}
 
-	public void mouseDragged(int x, int y)
+	public synchronized void mouseDragged(int x, int y)
 	{
 		this.x = x;
 		this.y = y;
@@ -152,7 +152,7 @@ public class InputStatus implements IInputStatus
 		mouseMoved(event.getX(), event.getY());
 	}
 
-	public void mouseMoved(int x, int y)
+	public synchronized void mouseMoved(int x, int y)
 	{
 		this.x = x;
 		this.y = y;
@@ -163,7 +163,7 @@ public class InputStatus implements IInputStatus
 		mouseWheelMoved(event.getWheelRotation());
 	}
 
-	public void mouseWheelMoved(int wheelRotation)
+	public synchronized void mouseWheelMoved(int wheelRotation)
 	{
 		w += wheelRotation;
 	}
@@ -173,7 +173,7 @@ public class InputStatus implements IInputStatus
 		keyPressed(event.getKeyCode());
 	}
 
-	public void keyPressed(int keyCode)
+	public synchronized void keyPressed(int keyCode)
 	{
 		keys[keyCode].press();
 	}
@@ -183,7 +183,7 @@ public class InputStatus implements IInputStatus
 		keyReleased(event.getKeyCode());
 	}
 
-	public void keyReleased(int keyCode)
+	public synchronized void keyReleased(int keyCode)
 	{
 		keys[keyCode].release();
 	}
